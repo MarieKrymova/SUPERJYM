@@ -1,5 +1,5 @@
 # Сайт фитнес-центра SUPERGYM
-- адаптив 1366px, 768px, 320px (desktop first)
+- адаптив 1200px, 768px, 320px (desktop first)
 - слайдеры
 - табы
 - аккордеоны
