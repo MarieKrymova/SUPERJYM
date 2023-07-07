@@ -7,18 +7,59 @@
     <meta name="description" content="Проект сайта фитнес-центра SUPERGYM.">
     <title>SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font">
-    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
-    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
-    <link rel="preload" href="fonts/alumni-sans-semibold.woff2" as="font">
+    <link rel="preload" href="fonts/alumni-sans-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+          <div class="header__logo-container">
+            <div class="header__logo">
+              <img src="img/svg/logo.svg" width="122" height="44" alt="Логотип фитнес-центра SUPERGYM.">
+              <source media=" (max-width: 768px) " srcset="img/svg/logo.svg" width="82" height="27">
+              <source media=" (max-width: 320px) " srcset="img/svg/logo.svg" width="69" height="24">
+            </div>
+            <div class="header__phone">
+              <a href="tel:88005555555">8-800-555-55-55</a>
+            </div>
+          </div>
+          <div class="header__container">
+            <div class="header__content-wrapper">
+              <p>
+                Тренажёрный зал
+              </p>
+              <p>
+                Групповые занятия
+              </p>
+              <p>
+                Кардио-зона
+              </p>
+            </div>
+            <div class="header__title-wrapper">
+              <h2>
+                Омск
+              </h2>
+              <h1>
+                Фитнес<br>центр
+              </h1>
+              <a href="#seasontickets">Купить абонемент</a>
+            </div>
+            <div class="header__img-wrapper">
+              <source type="image/webp" media=" (max-width: 768px) " srcset="img/header-sportsman-tablet.webp 1x, img/header-sportsman-tablet@2x.webp 2x">
+              <source type="image/webp" media=" (max-width: 320px) " srcset="img/header-sportsman-mobile.webp 1x, img/header-sportsman-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/header-sportsman-desktop.webp 1x, img/header-sportsman-desktop@2x.webp 2x">
+              <source media=" (max-width: 768px) " srcset="img/header-sportsman-tablet.jpg 1x, img/header-sportsman-tablet@2x.jpg 2x">
+              <source media=" (max-width: 320px) " srcset="img/header-sportsman-mobile.jpg 1x, img/header-sportsman-mobile@2x.jpg 2x">
+              <img src="img/header-sportsman-desktop.jpg" srcset="img/header-sportsman-desktop@2x.jpg 2x" width="500" height="556" alt="Фото спортсмен-сумермен.">
+            </div>
+          </div>
+        </div>
       </header>
       <main>
         <section class="intro">
@@ -26,45 +67,18 @@
             <h1>Тестовая страница.</h1>
             <p>На данной странице показан пример модальных окон.</p>
             <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
+        </section>
+        <section id="seasontickets">
+          <h2>
+            Абонементы
+          </h2>
         </section>
       </main>
       <footer>
         <div class="container"></div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
