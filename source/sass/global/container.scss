@@ -1,7 +1,7 @@
 .container {
   width: 100%;
-  min-width: 320px;
-  max-width: 1920px;
+  min-width: $vp-320;
+  max-width: $vp-1200;
   margin: 0 auto;
   padding: 0 20px;
 
