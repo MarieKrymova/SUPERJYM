@@ -31,13 +31,13 @@
               <a href="tel:88005555555">8-800-555-55-55</a>
             </div>
           </div>
-          <div class="header__container">
+          <div class="header__hero">
             <div class="header__content-wrapper">
               <p>
-                Тренажёрный&nbspзал
+                Тренажёрный&nbsp;зал
               </p>
               <p>
-                Групповые&nbspзанятия
+                Групповые&nbsp;занятия
               </p>
               <p>
                 Кардио-зона
@@ -50,15 +50,13 @@
               <h1>
                 Фитнес<br>центр
               </h1>
-              <a href="#seasontickets">Купить абонемент</a>
+              <a class="header__buy-button btn" href="#seasontickets">Купить абонемент</a>
             </div>
             <div class="header__img-wrapper">
               <picture>
                 <source type="image/webp" media=" (max-width: 768px) " srcset="img/header-sportsman-tablet.webp 1x, img/header-sportsman-tablet@2x.webp 2x">
-                <source type="image/webp" media=" (max-width: 320px) " srcset="img/header-sportsman-mobile.webp 1x, img/header-sportsman-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/header-sportsman-desktop.webp 1x, img/header-sportsman-desktop@2x.webp 2x">
                 <source media=" (max-width: 768px) " srcset="img/header-sportsman-tablet.jpg 1x, img/header-sportsman-tablet@2x.jpg 2x">
-                <source media=" (max-width: 320px) " srcset="img/header-sportsman-mobile.jpg 1x, img/header-sportsman-mobile@2x.jpg 2x">
                 <img src="img/header-sportsman-desktop.jpg" srcset="img/header-sportsman-desktop@2x.jpg 2x" width="500" height="556" alt="Фото спортсмен-сумермен.">
               </picture>
             </div>
@@ -72,8 +70,57 @@
           </h2>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__custom-input custom-input">
+          <div class="container">
+            <h2 class="visually-hidden">Записаться на бесплатное занятие</h2>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <fieldset>
+                <legend>Бесплатное занятие</legend>
+                <div class="custom-input__wrapper">
+                  <div class="custom-input__name">
+                    <label for="name">
+                      <span class="visually-hidden">Имя</span>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                  </div>
+                  <div class="custom-input__phone">
+                    <label for="phone-number">
+                      <span class="visually-hidden">Телефон</span>
+                    </label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Телефон" required>
+                  </div>
+                </div>
+                <div class="custom-input__submit">
+                  <button class="custom-input__button btn" type="submit">Отправить</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="footer__contacts contacts">
+          <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts__wrapper">
+              <div>
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </div>
+              <div>
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+              <div>
+                <h3>Телефон:</h3>
+                <p>8-800-555-55-55</p>
+              </div>
+              <div>
+                <h3>Email:</h3>
+                <p>omsk@supergym.ru</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

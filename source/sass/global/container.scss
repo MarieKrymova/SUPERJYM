@@ -4,6 +4,9 @@
   max-width: $vp-1200;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include vp-1119 {
     padding: 0 45px;

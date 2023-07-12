@@ -1,26 +1,46 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
+  padding: 14px 15px;
   color: $color-default-white;
-
-  background-color: $color-sapphire;
-  border: none;
+  font-family: $ff-roboto;
+  font-size: $fz-default * 0.75;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background-color: $color-transparent;
+  border: 4px solid $color-default-white;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  @include active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+
+  &--blue {
+    color: $color-sapphire;
+    border: 2px solid $color-sapphire;
+
+    @include hover-focus {
+      background-color: $red-to-blue-buttons;
+      color: $color-default-white;
+    }
+
+    @include active {
+      background-color: $red-to-blue-buttons;
+      color: rgba($color-default-white, 0.5);
+    }
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

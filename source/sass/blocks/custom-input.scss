@@ -1,111 +1,184 @@
-.custom-input,
-.custom-textarea {
-  position: relative;
+.custom-input {
+  width: 50%;
+  background-color: $color-sapphire;
+  padding-top: 56px;
+  padding-bottom: 70px;
+  margin: 0 auto;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    padding-top: 54px;
+    padding-right: 32px;
+  }
+}
+
+.custom-input form {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.custom-input fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-input legend {
+  font-size: $fz-default * 3.375;
+  font-weight: 800;
+  line-height: 156%;
+  letter-spacing: 1.62px;
+  color: $color-default-white;
+
+  @include vp-1119 {
+    font-size: $fz-default * 2.625;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  @include vp-767 {
+    font-size: $fz-default * 2;
+    font-weight: 600;
+    letter-spacing: 0.96px;
+  }
+}
+
+.custom-input__wrapper {
+  display: grid;
+  grid-template-columns: 190px 190px;
+  column-gap: 30px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1199px) {
+    grid-template-columns: 206px 206px;
+    column-gap: 60px;
+  }
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+
+.custom-input input {
+  width: 190px;
+  height: 30px;
+  padding: 5px 0;
+  font-family: $ff-roboto;
+  font-size: $fz-default * 0.875;
+  font-weight: 400;
+  line-height: $fz-default * 1.375;
+  color: $color-default-white;
+  background-color: $color-transparent;
+  border: none;
+  border-bottom: 1px solid rgba($color-default-white, 0.5);
+  outline: none;
+
+  transition: border-bottom $trans-default;
+
+  @media screen and (max-width: 1199px) {
+    width: 206px;
   }
 
-  label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
+  @media screen and (max-width: 767px) {
+    width: 290px;
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
+  &::placeholder {
+    color: $color-default-white;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    line-height: $fz-default * 1.375;
+    font-size: $fz-default * 0.875;
   }
 
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
+  &:hover {
+    border-bottom: 1px solid $color-default-white;
+  }
 
-    color: #ff1553;
+  &:focus,
+  &:active {
+    border: 1px solid $color-default-white;
+    padding-left: 5px;
+  }
 
-    opacity: 0;
+  &:disabled {
+    border-bottom: 1px solid rgba($color-default-white, 0.3);
+  }
+}
 
-    transition: opacity 0.3s ease;
+.custom-input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity $trans-default;
+}
 
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
+.custom-input input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity $trans-default;
+}
+
+.custom-input input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity $trans-default;
+}
+
+.custom-input input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity $trans-default;
+}
+
+.custom-input__button {
+  border: 3px solid $color-default-white;
+  width: 410px;
+  min-height: 52px;
+  font-family: $ff-roboto;
+  font-size: $fz-default * 0.875;
+
+  @media screen and (max-width: 1199px) {
+    width: 472px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 290px;
+  }
+}
+
+.custom-input__error {
+  position: absolute;
+  right: 0;
+  bottom: 35px;
+  color: $color-torch-red-bright;
+  opacity: 0;
+
+  transition: opacity $trans-default;
+
+  @media screen and (max-width: 767px) {
+    bottom: 20px;
+  }
+}
+
+.custom-input .is-invalid {
+  input {
+    border-bottom: 1px solid $color-torch-red-bright;
+
+    &:focus,
+    &:hover {
+      border-bottom: 1px solid rgba($color-torch-red-bright, 0.5);
     }
   }
+}
+
+.custom-input .input-message {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
 
   &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-    }
-  }
-
-  &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
-    }
+    color: $color-torch-red-bright;
   }
 }

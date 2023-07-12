@@ -1,0 +1,97 @@
+.contacts {
+  border-top: 1px solid $color-light-slate-grey;
+  width: 50%;
+  padding-top: 56px;
+  padding-left: 100px;
+  padding-bottom: 30px;
+
+  @include vp-1119 {
+    border-top: none;
+    width: 100%;
+    padding-top: 61px;
+    padding-left: 88px;
+  }
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 170px 170px;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 18px;
+  grid-column-gap: 120px;
+  grid-auto-flow: column;
+  padding-left: 4px;
+  padding-top: 2px;
+  position: relative;
+
+  @include vp-1119 {
+    padding-left: 0;
+    grid-template-columns: 222px 222px;
+    grid-column-gap: 92px;
+    justify-content: center;
+  }
+}
+
+.contacts__wrapper::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 103px;
+  background-color: $color-light-slate-grey;
+  left: 234px;
+  top: 8px;
+
+  @include vp-1119 {
+    height: 129px;
+    left: 266px;
+    top: 10px;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-alumnisans;
+  font-size: $fz-default * 3.375;
+  font-weight: 600;
+  letter-spacing: 1.62px;
+  line-height: normal;
+  color: $color-sapphire;
+  margin-bottom: 35px;
+
+  @include vp-1119 {
+    font-size: $fz-default * 2.6255;
+    letter-spacing: 1.26px;
+    margin-bottom: 30px;
+  }
+}
+
+.contacts h3 {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-roboto;
+  font-size: $fz-default;
+  font-weight: 700;
+  line-height: 150%;
+  color: $color-sapphire;
+  margin-bottom: 3px;
+
+  @include vp-1119 {
+    font-size: $fz-default * 1.25;
+    margin-bottom: 7px;
+  }
+}
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-roboto;
+  font-size: $fz-default * 0.875;
+  font-weight: 400;
+  line-height: 152.344%;
+  color: $color-sapphire;
+
+  @include vp-1119 {
+    font-size: $fz-default * 1.125;
+  }
+}
