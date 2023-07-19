@@ -124,7 +124,6 @@
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: normal;
   margin: 0;
 }
 
@@ -132,11 +131,14 @@
   font-size: $fz-default * 5.75;
   letter-spacing: 4.6px;
   margin-bottom: 50px;
+  line-height: $fz-default * 6.875;
+  -webkit-text-stroke: 2px $color-default-white;
 
   @include vp-1119 {
     font-size: $fz-default * 4.5;
     letter-spacing: 3.6px;
     text-transform: none;
+    line-height: $fz-default * 5.375;
     padding-right: 0;
     margin-bottom: 37px;
   }
@@ -151,10 +153,12 @@
   letter-spacing: 1.44px;
   padding-right: 53px;
   margin-bottom: 10px;
+  line-height: $fz-default * 3.625;
 
   @include vp-1119 {
     font-size: $fz-default * 2.125;
     letter-spacing: 1.02px;
+    line-height: $fz-default * 2.5625;
     padding-right: 0;
     padding-top: 18px;
     margin-bottom: 4px;
@@ -163,6 +167,7 @@
   @include vp-767 {
     font-size: $fz-default * 1.75;
     letter-spacing: 0.84px;
+    line-height: $fz-default * 2.125;
     margin-bottom: 11px;
   }
 }

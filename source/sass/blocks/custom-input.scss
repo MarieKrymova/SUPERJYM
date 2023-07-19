@@ -24,18 +24,24 @@
   border: none;
   padding: 0;
   margin: 0;
+  padding-right: 151px;
+
+  @media screen and (max-width: 1199px) {
+    padding-right: 0;
+  }
 }
 
 .custom-input legend {
   font-size: $fz-default * 3.375;
   font-weight: 800;
-  line-height: 156%;
+  line-height: $fz-default * 5.265;
   letter-spacing: 1.62px;
   color: $color-default-white;
 
   @include vp-1119 {
     font-size: $fz-default * 2.625;
     font-weight: 700;
+    line-height: $fz-default * 3.125;
     margin-bottom: 8px;
   }
 
@@ -43,6 +49,7 @@
     font-size: $fz-default * 2;
     font-weight: 600;
     letter-spacing: 0.96px;
+    line-height: $fz-default * 2.375;
   }
 }
 

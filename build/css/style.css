@@ -1135,6 +1135,20 @@ button.swiper-pagination-bullet {
 }
 @font-face {
   font-style: normal;
+  font-weight: 700;
+  font-family: "Alumni Sans";
+  font-display: swap;
+  src: url("../fonts/alumni-sans-bold.woff2") format("woff2"), url("../fonts/alumni-sans-bold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Alumni Sans";
+  font-display: swap;
+  src: url("../fonts/alumni-sans-extrabold.woff2") format("woff2"), url("../fonts/alumni-sans-extrabold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-display: swap;
@@ -1525,7 +1539,6 @@ button,
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: normal;
   margin: 0;
 }
 
@@ -1533,12 +1546,15 @@ button,
   font-size: 92px;
   letter-spacing: 4.6px;
   margin-bottom: 50px;
+  line-height: 110px;
+  -webkit-text-stroke: 2px #ffffff;
 }
 @media (max-width: 1199px) {
   .header__title-wrapper h1 {
     font-size: 72px;
     letter-spacing: 3.6px;
     text-transform: none;
+    line-height: 86px;
     padding-right: 0;
     margin-bottom: 37px;
   }
@@ -1554,11 +1570,13 @@ button,
   letter-spacing: 1.44px;
   padding-right: 53px;
   margin-bottom: 10px;
+  line-height: 58px;
 }
 @media (max-width: 1199px) {
   .header__title-wrapper h2 {
     font-size: 34px;
     letter-spacing: 1.02px;
+    line-height: 41px;
     padding-right: 0;
     padding-top: 18px;
     margin-bottom: 4px;
@@ -1568,6 +1586,7 @@ button,
   .header__title-wrapper h2 {
     font-size: 28px;
     letter-spacing: 0.84px;
+    line-height: 34px;
     margin-bottom: 11px;
   }
 }
@@ -1712,12 +1731,18 @@ button,
   border: none;
   padding: 0;
   margin: 0;
+  padding-right: 151px;
+}
+@media screen and (max-width: 1199px) {
+  .custom-input fieldset {
+    padding-right: 0;
+  }
 }
 
 .custom-input legend {
   font-size: 54px;
   font-weight: 800;
-  line-height: 156%;
+  line-height: 84.24px;
   letter-spacing: 1.62px;
   color: #ffffff;
 }
@@ -1725,6 +1750,7 @@ button,
   .custom-input legend {
     font-size: 42px;
     font-weight: 700;
+    line-height: 50px;
     margin-bottom: 8px;
   }
 }
@@ -1733,6 +1759,7 @@ button,
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 0.96px;
+    line-height: 38px;
   }
 }
 
@@ -2186,9 +2213,23 @@ button,
 @media (max-width: 1199px) {
   .contacts {
     border-top: none;
-    width: 100%;
+    width: 536px;
     padding-top: 61px;
-    padding-left: 88px;
+    padding-left: 17px;
+  }
+}
+
+.contacts .container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 1199px) {
+  .contacts .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 0;
   }
 }
 
@@ -2208,13 +2249,10 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__wrapper {
-    padding-left: 0;
     -ms-grid-columns: 222px 222px;
     grid-template-columns: 222px 222px;
     grid-column-gap: 92px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding-left: 17px;
   }
 }
 
@@ -2230,7 +2268,7 @@ button,
 @media (max-width: 1199px) {
   .contacts__wrapper::before {
     height: 129px;
-    left: 266px;
+    left: 283px;
     top: 10px;
   }
 }
@@ -2245,12 +2283,15 @@ button,
   line-height: normal;
   color: #102654;
   margin-bottom: 35px;
+  text-align: left;
 }
 @media (max-width: 1199px) {
   .contacts h2 {
     font-size: 42.008px;
     letter-spacing: 1.26px;
     margin-bottom: 30px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 

@@ -7,9 +7,18 @@
 
   @include vp-1119 {
     border-top: none;
-    width: 100%;
+    width: 536px;
     padding-top: 61px;
-    padding-left: 88px;
+    padding-left: 17px;
+  }
+}
+
+.contacts .container {
+  align-items: flex-start;
+
+  @include vp-1119 {
+    align-items: center;
+    padding: 0 0;
   }
 }
 
@@ -25,10 +34,9 @@
   position: relative;
 
   @include vp-1119 {
-    padding-left: 0;
     grid-template-columns: 222px 222px;
     grid-column-gap: 92px;
-    justify-content: center;
+    padding-left: 17px;
   }
 }
 
@@ -43,7 +51,7 @@
 
   @include vp-1119 {
     height: 129px;
-    left: 266px;
+    left: 283px;
     top: 10px;
   }
 }
@@ -58,11 +66,13 @@
   line-height: normal;
   color: $color-sapphire;
   margin-bottom: 35px;
+  text-align: left;
 
   @include vp-1119 {
     font-size: $fz-default * 2.6255;
     letter-spacing: 1.26px;
     margin-bottom: 30px;
+    align-self: flex-start;
   }
 }
 
